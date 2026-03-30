@@ -1,4 +1,4 @@
-include("${_build_cmake_local}")
+include("${PISUBMARINE_BUILD_SYSTEM}")
 
 project(${PISUBMARINE_MODULE_NAME}.App LANGUAGES CXX)
 

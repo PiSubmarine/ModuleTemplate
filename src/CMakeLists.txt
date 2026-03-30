@@ -1,4 +1,4 @@
-include("${_build_cmake_local}")
+include("${PISUBMARINE_BUILD_SYSTEM}")
 
 message("Adding library: ${PISUBMARINE_MODULE_NAME}")
 add_library(${PISUBMARINE_MODULE_NAME}

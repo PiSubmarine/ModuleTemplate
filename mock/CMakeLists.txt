@@ -1,5 +1,4 @@
-message("${_build_cmake_local}")
-include("${_build_cmake_local}")
+include("${PISUBMARINE_BUILD_SYSTEM}")
 
 add_library(${PISUBMARINE_MODULE_NAME}.Mock INTERFACE PiSubmarine/ModuleTemplate/IModuleTemplateMock.h)
 target_include_directories(${PISUBMARINE_MODULE_NAME}.Mock INTERFACE "${CMAKE_CURRENT_SOURCE_DIR}")
