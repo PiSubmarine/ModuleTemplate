@@ -9,7 +9,7 @@ execute_process(
 )
 
 if(GIT_REMOTE_URL)
-    string(REGEX REPLACE ".*/(.*)\\.git" "\\1" PISUBMARINE_MODULE_NAME "${GIT_REMOTE_URL}")
+    string(REGEX REPLACE ".*/([^/\\.]+)(\\.git)?$" "\\1" PISUBMARINE_MODULE_NAME "${GIT_REMOTE_URL}")
     set(PISUBMARINE_MODULE_NAME "PiSubmarine.${PISUBMARINE_MODULE_NAME}")
 else()
     set(PISUBMARINE_MODULE_NAME "PiSubmarine.ModuleNameNotSet")
