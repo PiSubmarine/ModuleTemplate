@@ -5,6 +5,7 @@ namespace PiSubmarine::ModuleTemplate
 {
     TEST(ModuleTemplateTest, GetReturnCode)
     {
-        ASSERT_EQ(ModuleTemplate::GetReturnCode(), 0);
+        ModuleTemplate moduleTemplate;
+        ASSERT_EQ(moduleTemplate.GetReturnCode(), 0);
     }
 }

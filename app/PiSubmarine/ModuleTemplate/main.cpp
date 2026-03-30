@@ -6,5 +6,6 @@ using namespace PiSubmarine::ModuleTemplate;
 int main(int argc, char* argv[])
 {
     spdlog::info(PISUBMARINE_TARGET_NAME);
-    return ModuleTemplate::GetReturnCode();
+    ModuleTemplate moduleTemplate;
+    return moduleTemplate.GetReturnCode();
 }

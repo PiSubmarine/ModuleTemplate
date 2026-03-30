@@ -2,7 +2,7 @@
 
 namespace PiSubmarine::ModuleTemplate
 {
-    int ModuleTemplate::GetReturnCode()
+    int ModuleTemplate::GetReturnCode() const
     {
         return 0;
     }

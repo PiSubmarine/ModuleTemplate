@@ -1,11 +1,14 @@
 #pragma once
 
+#include "PiSubmarine/ModuleTemplate/IModuleTemplate.h"
+
 namespace PiSubmarine::ModuleTemplate
 {
-    class ModuleTemplate
+    class ModuleTemplate : public IModuleTemplate
     {
 public:
-        static int GetReturnCode();
+        ~ModuleTemplate() override = default;
+        [[nodiscard]] int GetReturnCode() const override;
     };
 }
 
