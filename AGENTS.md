@@ -61,6 +61,11 @@ Test for this class is placed in test/PiSubmarine/Drv8908/DriverTest.cpp. This r
 - Avoid "utility" or "misc" modules. If you see a common functionality that should be extracted, ask what to do.
 - If a module grows beyond a single responsibility, split it.
 
+### Build and CMake Usage
+
+CMake must always be invoked using presets (consult CMakePresets.json). For example, for Windows host the correct preset
+is "windows-x64-debug". Do not call CMake manually with custom parameters.
+
 ## Target platforms
 
 The main targets are:
