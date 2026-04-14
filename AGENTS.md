@@ -169,9 +169,9 @@ In case that multi-threading is required, adhere to the following rules:
 - Do not use logging in STM32, except for debugging. Production STM32 code must not log anything.
 - Do not log in tight loops unless necessary.
 - Logging must not affect timing-critical code.
-- Logger Factories should be injected for each module. Individual loggers should be created by these factories. Do not
+- Logger Factories should be injected for each module. These factories should create individual loggers. Do not
   use global loggers.
-- Logging sinks are controlled by composition root. Modules are not allowed create sinks in **src** code.
+- Logging sinks are controlled by the composition root. Modules are not allowed to create sinks in **src** code.
 - Logging must include sufficient context (module, operation, identifiers).
 
 ## Code Review Expectations
