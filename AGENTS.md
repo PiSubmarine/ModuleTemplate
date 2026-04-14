@@ -85,6 +85,7 @@ The main targets are:
   namespace. For example, the module that defines SPI driver interface is named "PiSubmarine.Spi.Api".
 - Namespaces should be treated as part of class names; do not repeat words in full names (e.g., use "class PiSubmarine::
   Drv8908::Driver" instead of "class PiSubmarine::Drv8908::Drv8908Driver").
+- Interfaces should be prefixed with "I".
 
 ## Cross-cutting concepts
 
