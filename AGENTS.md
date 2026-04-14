@@ -216,5 +216,5 @@ In case that multi-threading is required, adhere to the following rules:
 - Do not use C-style code unless absolutely necessary.
 - Do not use unmanaged memory. Use smart pointers for owned memory, references for not-owned memory. Use raw pointers
   sparingly. Prefer static allocation.
-- Do not use std::cout, unless absolutely necessary. See logging cross-cutting concept.
+- Do not use iostream for logging, unless absolutely necessary. See logging cross-cutting concept.
 - Never use std::cin (or anything that introduces tight coupling) in src code.
