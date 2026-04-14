@@ -90,7 +90,7 @@ The main targets are:
 
 - spdlog is used for logging on all platforms, except STM32 (no logging on STM32).
 - gtest is used for unit tests on all platforms, except STM32 (no unit tests for platform-specific STM32 code).
-- If code may fail, use std::expected<Value, ErrorEnum> for return values. Or just ErrorEnum if no return value.
+- If code may fail, use std::expected<Value, ErrorEnum> for return values, even if Value is void.
 - Use fail-fast error handling for errors that are not recoverable. Usage of exceptions is allowed on all platforms,
   except STM32.
 - All platforms support C++23, all modules are compiled with C++23.
