@@ -158,6 +158,7 @@ In case that multi-threading is required, adhere to the following rules:
 - Mock external dependencies using gmock.
 - Do not test implementation details. Test behavior instead.
 - Platform-specific code may skip tests only if impossible to mock.
+- If some non-trivial code is constexpr, test that it can actually be evaluated at compile time. Use static_assert.
 
 ## Logging
 
