@@ -35,7 +35,8 @@ Usually, there is a local copy of the dependency in the directory above the sour
 For example, if the current project is in C:\Projects\PiSubmarine\Drv8908, and it depends
 on https://github.com/PiSubmarine/Spi.Linux then a local authoritative copy of Spi.Linux is likely located in
 C:\Projects\PiSubmarine\Spi.Linux. If not found, ask for the correct local location. Do not assume that this local copy
-will be present in the future. Do not reference it directly, only use PiSubmarineAddDependency with GitHub URL to the dependency.
+will be present in the future. Do not reference it directly, only use PiSubmarineAddDependency with GitHub URL to the
+dependency.
 
 Each module may depend on other PiSubmarine modules, as well as external libraries. Vcpkg manages external libraries.
 
@@ -168,7 +169,9 @@ In case that multi-threading is required, adhere to the following rules:
 - Do not use logging in STM32, except for debugging. Production STM32 code must not log anything.
 - Do not log in tight loops unless necessary.
 - Logging must not affect timing-critical code.
-- Loggers should be injected or retrieved for each module. Do not use global loggers.
+- Logger Factories should be injected for each module. Individual loggers should be created by these factories. Do not
+  use global loggers.
+- Logging sinks are controlled by composition root. Modules are not allowed create sinks in **src** code.
 - Logging must include sufficient context (module, operation, identifiers).
 
 ## Code Review Expectations
