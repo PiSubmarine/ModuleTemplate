@@ -1,56 +1,56 @@
 ---
 Language: Cpp
 BasedOnStyle: LLVM
-Standard: Latest
-
-IndentWidth: 4
-ContinuationIndentWidth: 4
-TabWidth: 4
-UseTab: ForIndentation
-NamespaceIndentation: All
 AccessModifierOffset: -4
-IndentAccessModifiers: false
-
-BreakBeforeBraces: Allman
-BraceWrapping:
+AlignConsecutiveAssignments: false
+AlignConsecutiveDeclarations: false
+AlignOperands: false
+AlignTrailingComments: false
+AlwaysBreakTemplateDeclarations: Yes
+BinPackParameters: false
+BraceWrapping: 
+  AfterCaseLabel: true
   AfterClass: true
-  AfterControlStatement: Always
+  AfterControlStatement: true
   AfterEnum: true
-  AfterExternBlock: true
   AfterFunction: true
   AfterNamespace: true
   AfterStruct: true
   AfterUnion: true
+  AfterExternBlock: true
   BeforeCatch: true
   BeforeElse: true
-  IndentBraces: false
+  BeforeLambdaBody: true
+  BeforeWhile: true
   SplitEmptyFunction: true
-  SplitEmptyNamespace: true
   SplitEmptyRecord: true
-
+  SplitEmptyNamespace: true
+BreakBeforeBraces: Custom
+BreakConstructorInitializers: AfterColon
+BreakConstructorInitializersBeforeComma: false
 ColumnLimit: 120
-PointerAlignment: Left
-ReferenceAlignment: Left
-DerivePointerAlignment: false
-SpaceBeforeParens: ControlStatements
-IndentPPDirectives: None
-Cpp11BracedListStyle: true
-AllowShortBlocksOnASingleLine: Never
-AllowShortEnumsOnASingleLine: false
-AllowShortFunctionsOnASingleLine: None
-AllowShortIfStatementsOnASingleLine: Never
-AllowShortLoopsOnASingleLine: false
-BinPackArguments: false
-BinPackParameters: false
-ReflowComments: Always
-FixNamespaceComments: false
-
-SortIncludes: true
-IncludeBlocks: Regroup
-IncludeIsMainRegex: "([-_](test|tests|mock|benchmark))?$"
-IncludeCategories:
-  - Regex: '^<.*>$'
+ConstructorInitializerAllOnOneLineOrOnePerLine: false
+IncludeCategories: 
+  - Regex: '^<.*'
     Priority: 1
-  - Regex: '^"[^"]+"$'
+  - Regex: '^".*'
     Priority: 2
-
+  - Regex: '.*'
+    Priority: 3
+IncludeIsMainRegex: '([-_](test|unittest))?$'
+IndentCaseBlocks: true
+IndentWidth: 4
+InsertNewlineAtEOF: true
+MacroBlockBegin: ''
+MacroBlockEnd: ''
+MaxEmptyLinesToKeep: 2
+NamespaceIndentation: All
+PointerAlignment: Left
+SpaceInEmptyParentheses: false
+SpacesInAngles: false
+SpacesInConditionalStatement: false
+SpacesInCStyleCastParentheses: false
+SpacesInParentheses: false
+TabWidth: 4
+UseTab: Always
+...
