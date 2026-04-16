@@ -42,7 +42,8 @@ AllowShortIfStatementsOnASingleLine: Never
 AllowShortLoopsOnASingleLine: false
 BinPackArguments: false
 BinPackParameters: false
-ReflowComments: false
+ReflowComments: Always
+FixNamespaceComments: false
 
 SortIncludes: true
 IncludeBlocks: Regroup
