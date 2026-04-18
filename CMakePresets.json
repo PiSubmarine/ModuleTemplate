@@ -38,13 +38,6 @@
       }
     },
     {
-      "name": "windows-msvc-debug-short",
-      "displayName": "Windows MSVC Debug (Short Path)",
-      "inherits": "windows-msvc-debug",
-      "binaryDir": "$env{SystemDrive}/t/${sourceDirName}",
-      "installDir": "$env{SystemDrive}/t/${sourceDirName}"
-    },
-    {
       "name": "pisubmarine-ssh-debug",
       "displayName": "PiSubmarine SSH Debug",
       "generator": "Ninja",
