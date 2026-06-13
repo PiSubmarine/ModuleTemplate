@@ -66,6 +66,7 @@ The main supported platform families in PiSubmarine are:
 This template currently defines these configure presets:
 
 - `windows-msvc-debug`: native Windows build with MSVC
+- `windows-mingw-debug`: native Windows build with MinGW
 - `linux-wsl2-debug`: Linux x64 build in WSL2
 - `pisubmarine-wsl2-debug`: cross-build for Raspberry Pi (`aarch64` Linux) from WSL2
 - `windows-wsl2-debug`: cross-build for Windows from WSL2 using MinGW
@@ -77,6 +78,12 @@ Typical commands:
 cmake --preset windows-msvc-debug
 cmake --build out/build/windows-msvc-debug
 ctest --test-dir out/build/windows-msvc-debug --output-on-failure
+```
+
+```powershell
+cmake --preset windows-mingw-debug
+cmake --build out/build/windows-mingw-debug
+ctest --test-dir out/build/windows-mingw-debug --output-on-failure
 ```
 
 ```powershell
